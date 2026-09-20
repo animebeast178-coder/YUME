@@ -1,0 +1,3500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>YUME — A Cinematic Dining Experience</title>
+
+  <meta
+    name="description"
+    content="YUME — A premium Japanese-inspired cinematic dining experience shaped by seasonal ingredients, thoughtful craft and unforgettable moments."
+  >
+
+  <meta
+    name="keywords"
+    content="YUME, Japanese restaurant, luxury dining, cinematic dining, Japanese cuisine, fine dining, omakase"
+  >
+
+  <meta name="author" content="Ch. S. E. Deepak">
+
+  <meta name="theme-color" content="#0d0b0b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YUME — A Cinematic Dining Experience">
+  <meta
+    property="og:description"
+    content="An intimate Japanese-inspired dining experience shaped by exceptional ingredients, thoughtful craft and unforgettable moments."
+  >
+  <meta property="og:image" content="gallery-new.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YUME — A Cinematic Dining Experience">
+  <meta
+    name="twitter:description"
+    content="A premium Japanese-inspired cinematic dining experience."
+  >
+  <meta name="twitter:image" content="gallery-new.jpg">
+
+  <link rel="canonical" href="./">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Restaurant structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "YUME",
+    "description": "A premium Japanese-inspired cinematic dining experience.",
+    "servesCuisine": [
+      "Japanese",
+      "Japanese-inspired"
+    ],
+    "priceRange": "₹₹₹₹",
+    "telephone": "+91 00000 00000",
+    "email": "hello@yume.jp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Sakura Lane",
+      "addressLocality": "Miyabi District",
+      "addressCountry": "JP"
+    },
+    "url": "./"
+  }
+  </script>
+
+</head>
+
+
+<body>
+
+  <!-- =====================================================
+       ACCESSIBILITY
+  ====================================================== -->
+
+  <a
+    class="skip-link"
+    href="#main-content"
+  >
+    Skip to main content
+  </a>
+
+
+  <!-- =====================================================
+       GLOBAL CINEMATIC PETALS
+       These are controlled by script.js and CSS.
+  ====================================================== -->
+
+  <div
+    class="global-petals"
+    id="globalPetals"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- =====================================================
+       YUME CINEMATIC INTRO
+  ====================================================== -->
+
+  <div
+    class="intro-screen"
+    id="introScreen"
+    aria-label="YUME introduction"
+  >
+
+    <div class="intro-content">
+
+      <div
+        class="intro-flower"
+        aria-hidden="true"
+      >
+        ✿
+      </div>
+
+      <div class="intro-logo">
+        Y U M E
+      </div>
+
+      <div class="intro-line"></div>
+
+      <button
+        class="intro-music"
+        id="introMusicButton"
+        type="button"
+        aria-label="Turn on music"
+      >
+
+        <span class="moon-music">
+
+          <svg
+            viewBox="0 0 32 32"
+            aria-hidden="true"
+          >
+
+            <path
+              d="M20.8 3.8
+                 C14.2 5.1 10.4 11.6 12.3 17.8
+                 C14.1 23.7 20.3 27.2 26.2 25.1
+                 C21.9 29.4 14.9 29.2 10.8 24.9
+                 C5.8 19.7 6.1 11.5 11.2 6.7
+                 C13.9 4.2 17.3 3.3 20.8 3.8Z"
+            ></path>
+
+            <path
+              class="music-note"
+              d="M21.5 10.5
+                 V18.2
+                 C21.1 17.8 20.5 17.6 19.8 17.6
+                 C18.5 17.6 17.5 18.4 17.5 19.5
+                 C17.5 20.6 18.5 21.4 19.8 21.4
+                 C21.2 21.4 22.2 20.6 22.2 19.4
+                 V13.2
+                 L25.5 12.4
+                 V10.5
+                 Z"
+            ></path>
+
+          </svg>
+
+        </span>
+
+        <span class="music-text">
+          <strong>TURN ON MUSIC</strong>
+          <small>TO GET A BETTER EXPERIENCE</small>
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       CUSTOM CURSOR
+  ====================================================== -->
+
+  <div
+    class="cursor-dot"
+    aria-hidden="true"
+  ></div>
+
+  <div
+    class="cursor-ring"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- =====================================================
+       SCROLL PROGRESS
+  ====================================================== -->
+
+  <div
+    class="scroll-progress"
+    id="scrollProgress"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- =====================================================
+       NAVIGATION
+  ====================================================== -->
+
+  <header
+    class="navbar"
+    id="nav"
+  >
+
+    <a
+      href="#home"
+      class="logo"
+      aria-label="YUME home"
+    >
+      YUME
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="navLinks"
+    >
+
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav
+      class="nav-links"
+      id="navLinks"
+      aria-label="Main navigation"
+    >
+
+      <a href="#home" data-i18n="nav.home">Home</a>
+
+      <a href="#story" data-i18n="nav.story">
+        Story
+      </a>
+
+      <a href="#menu" data-i18n="nav.menu">
+        Menu
+      </a>
+
+      <a href="#experience" data-i18n="nav.experience">
+        Experience
+      </a>
+
+      <a href="#reserve" data-i18n="nav.reserve">
+        Reserve
+      </a>
+
+      <a href="#reviews" data-i18n="nav.reviews">
+        Reviews
+      </a>
+
+      <a href="#gallery" data-i18n="nav.gallery">
+        Gallery
+      </a>
+
+      <a href="#contact" data-i18n="nav.contact">
+        Contact
+      </a>
+
+    </nav>
+
+
+    <!-- LANGUAGE -->
+
+    <div
+      class="language-switcher"
+      aria-label="Language selector"
+    >
+
+      <button
+        type="button"
+        class="language-button active"
+        data-lang="en"
+        aria-pressed="true"
+      >
+        EN
+      </button>
+
+      <span aria-hidden="true">
+        /
+      </span>
+
+      <button
+        type="button"
+        class="language-button"
+        data-lang="ja"
+        aria-pressed="false"
+      >
+        JP
+      </button>
+
+    </div>
+
+
+    <a
+      href="#reserve"
+      class="nav-button"
+    >
+      <span data-i18n="nav.reserveTable">
+        Reserve a Table
+      </span>
+    </a>
+
+  </header>
+
+
+  <!-- =====================================================
+       MAIN CONTENT
+  ====================================================== -->
+
+  <main id="main-content">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section
+      class="hero"
+      id="home"
+      aria-labelledby="hero-title"
+    >
+
+      <div class="hero-background"></div>
+
+      <div class="hero-overlay"></div>
+
+
+      <!-- HERO PETALS -->
+
+      <div
+        class="petals"
+        id="petals"
+        aria-hidden="true"
+      ></div>
+
+
+      <div class="hero-vertical hero-left">
+        A QUIET MOMENT
+        <span>IN EVERY MEMORY</span>
+      </div>
+
+
+      <div class="hero-vertical hero-right">
+        YUME
+        <span>THE ART OF DINING</span>
+      </div>
+
+
+      <div class="hero-content reveal">
+
+        <p class="eyebrow">
+          A CINEMATIC DINING EXPERIENCE
+        </p>
+
+
+        <h1 id="hero-title">
+          YUME
+        </h1>
+
+
+        <div
+          class="hero-divider"
+          aria-hidden="true"
+        >
+          <span></span>
+          <b>○</b>
+          <span></span>
+        </div>
+
+
+        <h2>
+          Where every moment<br>
+          <em>becomes a memory.</em>
+        </h2>
+
+
+        <p class="hero-description">
+          An intimate Japanese-inspired dining
+          experience shaped by exceptional
+          ingredients, thoughtful craft and
+          unforgettable moments.
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="#reserve"
+            class="btn btn-primary magnetic"
+          >
+            Reserve a Table
+          </a>
+
+
+          <a
+            href="#menu"
+            class="btn btn-secondary magnetic"
+          >
+            Explore Menu
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="scroll-indicator">
+        <span></span>
+        SCROLL TO DISCOVER
+      </div>
+
+    </section>
+
+<!-- =====================================================
+     YUME — MORE THAN A MEAL
+===================================================== -->
+
+<section
+  class="table-section"
+  aria-labelledby="table-title"
+>
+
+  <div
+    class="table-image image"
+    role="img"
+    aria-label="YUME dining experience"
+  ></div>
+
+
+  <div class="table-cinematic-overlay"></div>
+
+
+  <div class="table-content reveal">
+
+    <p class="eyebrow">
+      A TABLE BEYOND TIME
+    </p>
+
+
+    <h2 id="table-title">
+      More Than
+      <br>
+      <em>A Meal</em>
+    </h2>
+
+
+    <p class="table-intro">
+      At YUME, dining is not simply about food.
+      It is about the feeling created around it —
+      the people beside you, the quiet between
+      conversations, and the memories that remain
+      long after the final course.
+    </p>
+
+
+    <div class="table-experience-grid">
+
+
+      <div class="table-experience-item">
+
+        <span class="table-experience-symbol">
+          食
+        </span>
+
+        <h3>
+          FOOD
+        </h3>
+
+        <p>
+          Exceptional ingredients,
+          thoughtfully crafted with
+          Japanese-inspired precision.
+        </p>
+
+      </div>
+
+
+      <div class="table-experience-item">
+
+        <span class="table-experience-symbol">
+          花
+        </span>
+
+        <h3>
+          MOMENTS
+        </h3>
+
+        <p>
+          Meaningful experiences,
+          shared slowly with the
+          people who matter.
+        </p>
+
+      </div>
+
+
+      <div class="table-experience-item">
+
+        <span class="table-experience-symbol">
+          夢
+        </span>
+
+        <h3>
+          MEMORIES
+        </h3>
+
+        <p>
+          Stories that stay with you
+          long after you leave YUME.
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+   <a
+    href="#story"
+    class="text-link table-story-link"
+>
+    <span class="story-flower" aria-hidden="true">🌸</span>
+
+    <span class="story-button-text">
+        Discover our story
+    </span>
+
+    <span class="story-button-arrow" aria-hidden="true">
+        →
+    </span>
+</a>
+
+  </div>
+
+
+  <div class="table-side-mark">
+    <span>夢</span>
+    MORE THAN A MEAL
+  </div>
+
+
+  <div class="table-bottom-note">
+    GOOD FOOD
+    <br>
+    BETTER COMPANY
+    <br>
+    LASTING MEMORIES
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     YUME — OUR STORY
+     ========================================================= -->
+
+<section class="yume-story" id="story">
+
+    <!-- ===================== OPENING ===================== -->
+
+    <div class="story-opening">
+
+        <div class="story-opening-inner reveal">
+
+            <span class="story-opening-label">
+                THE SOUL OF YUME
+            </span>
+
+            <span class="story-opening-kanji">
+                夢
+            </span>
+
+            <h2>
+                YUME is not<br>
+                <em>a restaurant.</em>
+            </h2>
+
+            <p class="story-opening-subtitle">
+                It is a dream.
+            </p>
+
+            <div class="story-opening-line"></div>
+
+            <p class="story-opening-description">
+                A story about love, loss, hope,<br>
+                and the moments we should never postpone.
+            </p>
+
+            <a href="#story-begin" class="story-scroll">
+    <span class="story-scroll-text">
+        EXPLORE OUR STORY
+    </span>
+
+    <span class="story-scroll-arrow">
+        →
+    </span>
+</a>
+
+        </div>
+
+    </div>
+<!-- =====================================================
+     YUME — CONTINUOUS STORY
+===================================================== -->
+
+<article
+    class="story-text-section story-dark"
+    style="background: url('./story-bg.jpg') center center / cover no-repeat !important; background-attachment: scroll !important;"
+>
+
+    <div class="story-paragraph-inner reveal">
+
+        <div class="story-paragraph-label">
+            OUR STORY
+        </div>
+
+        <div class="story-paragraph-line"></div>
+
+        <h3>
+            A Dream<br>
+            <em>Begins.</em>
+        </h3>
+
+        <p class="story-paragraph-subtitle">
+            MORE THAN A RESTAURANT.<br>
+            A PIECE OF A DREAM.
+        </p>
+
+
+        <div class="story-copy">
+
+            <p>
+                Every great journey starts with
+                <strong>a dream.</strong>
+                Before YUME had a name, there was a boy
+                with a simple love for food, culture and the
+                little things that bring people together.
+                He believed that a meal could be more than
+                just food — it could become
+                <strong>a memory, a feeling and a connection.</strong>
+            </p>
+
+
+            <p>
+                In a <strong>quiet kitchen</strong>, far from
+                the spotlight, he spent his days learning,
+                creating and searching for something deeper.
+                He travelled, tasted, listened and experienced
+                the beauty of Japanese culture — not just in
+                its cuisine, but in its philosophy:
+                <strong>respect, simplicity and harmony.</strong>
+            </p>
+
+
+            <p>
+                Those ordinary moments slowly turned into
+                <strong>extraordinary lessons.</strong>
+                From bustling streets to small family-run
+                restaurants, he collected stories, flavours
+                and emotions. Each place, each person and each
+                dish taught him something new about
+                <strong>life, about people and about himself.</strong>
+            </p>
+
+
+            <p>
+                Somewhere along the way, he met
+                <strong>a woman</strong> who made ordinary days
+                feel different. He loved the way she smiled,
+                the way she listened, and the quiet moments
+                they shared without needing to say anything
+                at all. She believed in his dream, stood by
+                his side, and gave meaning to the journey.
+                Together, they imagined a future — a home,
+                a table and a place where people could feel
+                the same <strong>warmth</strong> they found
+                in each other.
+            </p>
+
+
+            <p>
+                But life does not always go as planned.
+                She fell ill, and even as she fought with
+                incredible strength, there were days of
+                uncertainty, fear and silence. He wanted to
+                create one perfect moment for her — a meal
+                made with love, a table set just for them.
+                But before that moment could arrive,
+                <strong>she was gone.</strong>
+                The food remained untouched.
+                The words remained unsaid.
+                And the tomorrow they had imagined together
+                belonged only to <strong>memories.</strong>
+            </p>
+
+
+            <p>
+                Her absence could not end the dream.
+                It changed what the dream meant.
+                He realised that while he could no longer
+                create that moment for the person he loved,
+                he could create <strong>a place</strong> where
+                others could experience moments they never
+                want to forget — a place where people could
+                slow down, sit together, <strong>laugh, talk,
+                love</strong> and cherish the time they have.
+            </p>
+
+
+            <p>
+                That vision became <strong>YUME.</strong>
+                A place built from love, loss, hope and memory.
+                A place where <strong>tradition meets modernity</strong>,
+                where every detail tells a story, and where
+                every guest becomes a part of
+                <strong>something bigger.</strong>
+            </p>
+
+
+            <p>
+                Today, YUME is more than a restaurant.
+                It is a dream fulfilled — a tribute to love,
+                a celebration of life and a reminder that
+                <strong>every moment matters.</strong>
+            </p>
+
+
+            <div class="story-paragraph-ending">
+
+                <div class="story-paragraph-ending-line"></div>
+
+                <p>
+                    Because for us, food is not the end.
+                    <br>
+                    <strong>It is the beginning of something more.</strong>
+                </p>
+
+                <div class="story-handwritten">
+                    A story that lives on.
+                </div>
+
+                <div class="story-yume-name">
+                    YUME
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="story-paragraph-side">
+
+        <span class="story-paragraph-kanji">
+            夢
+        </span>
+
+        <span>PEOPLE</span>
+        <span>FLAVOURS</span>
+        <span>PLACES</span>
+        <span>MEMORIES</span>
+        <span>A DREAM</span>
+
+        <small>
+            THE SOUL<br>
+            OF YUME
+        </small>
+
+    </div>
+
+</article>
+    
+
+    <!-- =====================================================
+         CHEF
+    ====================================================== -->
+
+    <section
+      class="chef-section"
+      aria-labelledby="chef-title"
+    >
+
+      <div
+        class="chef-image image reveal"
+        role="img"
+        aria-label="YUME chef preparing a dish"
+      ></div>
+
+
+      <div class="chef-content reveal">
+
+        <p class="eyebrow">
+          MEET OUR CHEF
+        </p>
+
+
+        <h2 id="chef-title">
+          Crafted<br>
+          <em>with Passion</em>
+        </h2>
+
+
+        <div class="chef-story">
+
+  <p>
+    Our chef believes that great food begins
+    long before it reaches the table.
+  </p>
+
+  <p>
+    Every ingredient is chosen with intention —
+    from the season it comes from to the way
+    it is prepared, plated and finally shared.
+  </p>
+
+  <p>
+    Rooted in Japanese culinary traditions,
+    his cooking follows a simple philosophy:
+    respect the ingredient, honour the moment,
+    and never create more than what is needed.
+  </p>
+
+  <p>
+    The result is food that feels delicate,
+    thoughtful and deeply personal.
+    Not simply something to eat,
+    but something to remember.
+  </p>
+
+</div>
+
+
+        <div class="chef-signature">
+          YUME
+        </div>
+
+
+        <span class="chef-note">
+          SEASONAL KITCHEN · THOUGHTFUL CRAFT
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         MENU
+    ====================================================== -->
+
+    <section
+      class="menu-section"
+      id="menu"
+      aria-labelledby="menu-title"
+    >
+
+      <div class="section-heading reveal">
+
+        <p class="eyebrow">
+          OUR MENU
+        </p>
+
+
+        <h2 id="menu-title">
+          24 Dishes.<br>
+          <em>Endless Stories.</em>
+        </h2>
+
+
+        <p>
+          Every dish is carefully created as part
+          of the YUME journey.
+        </p>
+
+      </div>
+
+
+      <!-- MENU FILTERS -->
+
+<!-- =====================================================
+     YUME CINEMATIC MENU
+===================================================== -->
+
+<section class="yume-cinematic-menu" id="yume-menu">
+
+    <!-- ================= SCREEN 1 : MENU ================= -->
+
+    <!-- SCREEN 1 : MENU -->
+
+<div class="yume-menu-screen yume-menu-cover">
+
+    <div class="yume-menu-cover-card">
+
+        <div class="yume-menu-cover-image"></div>
+
+        <div class="yume-menu-cover-overlay"></div>
+
+        <div class="yume-menu-cover-content">
+
+            <span class="yume-menu-kicker">
+                THE YUME COLLECTION
+            </span>
+
+            <div class="yume-menu-kanji">夢</div>
+
+            <span class="yume-menu-brand">
+                YUME
+            </span>
+
+            <div class="yume-menu-divider"></div>
+
+            <p class="yume-menu-side-copy">
+                JAPANESE<br>
+                INSPIRED<br>
+                MODERNLY<br>
+                SERVED
+            </p>
+
+            <div class="yume-menu-title-wrap">
+                <span class="yume-menu-small-title">
+                    THE YUME COLLECTION
+                </span>
+
+                <h2>MENU</h2>
+
+                <p>
+                    EXPLORE OUR CULINARY JOURNEY
+                </p>
+            </div>
+
+            <button
+                type="button"
+                class="yume-menu-next"
+                aria-label="Open menu categories"
+            >
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ================= SCREEN 2 : CATEGORIES ================= -->
+
+    <div class="yume-menu-screen yume-menu-categories-screen">
+
+        <div class="yume-menu-categories-header">
+
+            <span>OUR MENU</span>
+
+            <h2>
+                EXPLORE<br>
+                <em>THE FLAVORS</em>
+            </h2>
+
+            <p>
+                A CURATED SELECTION OF DISHES
+                INSPIRED BY NATURE, TRADITION
+                AND A MODERN VISION.
+            </p>
+
+        </div>
+
+
+        <div class="yume-menu-category-list">
+        
+          <button
+    type="button"
+    class="yume-category-item"
+    data-category="sushi"
+>
+    <span class="yume-category-number">01</span>
+
+    <span
+        class="yume-category-image category-sushi"
+    ></span>
+
+    <span class="yume-category-info">
+        <strong>SUSHI</strong>
+        <small>
+            TRADITIONAL CRAFT · TIMELESS FLAVOR.
+        </small>
+    </span>
+
+    <span class="yume-category-arrow">
+        →
+    </span>
+</button>
+
+            <button
+                type="button"
+                class="yume-category-item"
+                data-category="sashimi"
+            >
+            <span class="yume-category-number">02</span>
+
+                <span
+                    class="yume-category-image category-sashimi"
+                ></span>
+
+                <span class="yume-category-info">
+                    <strong>SASHIMI</strong>
+                    <small>
+                        PURE INGREDIENTS · TRUE TASTE.
+                    </small>
+                </span>
+
+                <span class="yume-category-arrow">
+                    →
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="yume-category-item"
+                data-category="mains"
+            >
+                <span class="yume-category-number">03</span>
+
+                <span
+                    class="yume-category-image category-mains"
+                ></span>
+
+                <span class="yume-category-info">
+                    <strong>MAINS</strong>
+                    <small>
+                        BOLD CREATIONS · LASTING IMPRESSIONS.
+                    </small>
+                </span>
+
+                <span class="yume-category-arrow">
+                    →
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="yume-category-item"
+                data-category="ramen"
+            >
+                <span class="yume-category-number">04</span>
+
+                <span
+                    class="yume-category-image category-ramen"
+                ></span>
+
+                <span class="yume-category-info">
+                    <strong>RAMEN</strong>
+                    <small>
+                        DEPTH IN EVERY BOWL.
+                    </small>
+                </span>
+
+                <span class="yume-category-arrow">
+                    →
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="yume-category-item"
+                data-category="dessert"
+            >
+                <span class="yume-category-number">05</span>
+
+                <span
+                    class="yume-category-image category-dessert"
+                ></span>
+
+                <span class="yume-category-info">
+                    <strong>DESSERT</strong>
+                    <small>
+                        A SWEET ENDING.
+                    </small>
+                </span>
+
+                <span class="yume-category-arrow">
+                    →
+                </span>
+            </button>
+
+
+            <button
+                type="button"
+                class="yume-category-item"
+                data-category="drinks"
+            >
+                <span class="yume-category-number">06</span>
+
+                <span
+                    class="yume-category-image category-drinks"
+                ></span>
+
+                <span class="yume-category-info">
+                    <strong>DRINKS</strong>
+                    <small>
+                        REFRESH · INDULGE · REPEAT.
+                    </small>
+                </span>
+
+                <span class="yume-category-arrow">
+                    →
+                </span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SCREEN 3 : DISHES ================= -->
+
+    <div class="yume-menu-screen yume-dishes-screen">
+
+        <button
+            type="button"
+            class="yume-menu-back"
+        >
+            ← BACK TO MENU
+        </button>
+
+        <div class="yume-dishes-header">
+
+            <span>THE YUME COLLECTION</span>
+
+            <h2 id="yume-selected-category">
+                SUSHI
+            </h2>
+
+            <p id="yume-selected-description">
+                TRADITIONAL CRAFT. TIMELESS FLAVOR.
+            </p>
+
+        </div>
+
+
+        <div
+            class="yume-dishes-grid"
+            id="yume-dishes-grid"
+        ></div>
+
+    </div>
+
+</section>
+
+      <!-- =====================================================
+     YUME PREMIUM MENU DATA — 40 DISHES
+====================================================== -->
+
+<div class="menu-grid">
+
+    <!-- ==================== SUSHI ==================== -->
+
+    <!-- 01 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish01"></div>
+    <div>
+        <span>01 · SUSHI</span>
+        <h3>Hana Omakase</h3>
+        <p>Chef's selection of premium nigiri with seasonal citrus.</p>
+        <small>Akami · Salmon · Uni · Shiso · Yuzu</small>
+    </div>
+    <strong>$42</strong>
+</article>
+
+<!-- 02 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish02"></div>
+    <div>
+        <span>02 · SUSHI</span>
+        <h3>Sakura Salmon</h3>
+        <p>Silken salmon, sakura salt and delicate citrus ponzu.</p>
+        <small>Salmon · Sakura · Ponzu · Shiso</small>
+    </div>
+    <strong>$38</strong>
+</article>
+
+<!-- 03 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish03"></div>
+    <div>
+        <span>03 · SUSHI</span>
+        <h3>Black Truffle Maki</h3>
+        <p>Wild mushroom, avocado and black truffle glaze.</p>
+        <small>Avocado · Mushroom · Truffle · Rice</small>
+    </div>
+    <strong>$46</strong>
+</article>
+
+<!-- 04 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish04"></div>
+    <div>
+        <span>04 · SUSHI</span>
+        <h3>Tokyo Flame Roll</h3>
+        <p>Seared salmon layered with sesame and signature spicy miso.</p>
+        <small>Salmon · Sesame · Miso · Negi</small>
+    </div>
+    <strong>$40</strong>
+</article>
+
+<!-- 05 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish05"></div>
+    <div>
+        <span>05 · SUSHI</span>
+        <h3>Akami Nigiri</h3>
+        <p>Premium bluefin tuna finished with aged soy.</p>
+        <small>Bluefin · Soy · Wasabi · Sushi Rice</small>
+    </div>
+    <strong>$44</strong>
+</article>
+
+<!-- 06 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish06"></div>
+    <div>
+        <span>06 · SUSHI</span>
+        <h3>Yuzu Hamachi</h3>
+        <p>Yellowtail brightened with fresh yuzu and microgreens.</p>
+        <small>Hamachi · Yuzu · Shiso · Citrus</small>
+    </div>
+    <strong>$39</strong>
+</article>
+
+<!-- 07 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish07"></div>
+    <div>
+        <span>07 · SUSHI</span>
+        <h3>Midnight Dragon</h3>
+        <p>Glazed eel, avocado and crisp cucumber with sesame.</p>
+        <small>Unagi · Avocado · Cucumber · Sesame</small>
+    </div>
+    <strong>$48</strong>
+</article>
+
+<!-- 08 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish08"></div>
+    <div>
+        <span>08 · SUSHI</span>
+        <h3>Kuro Signature Roll</h3>
+        <p>Salmon, avocado and ikura finished with YUME sauce.</p>
+        <small>Salmon · Ikura · Avocado · Yuzu</small>
+    </div>
+    <strong>$45</strong>
+</article>
+
+<!-- 09 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish09"></div>
+    <div>
+        <span>09 · SUSHI</span>
+        <h3>Imperial Salmon Roll</h3>
+        <p>Silky salmon, avocado and ikura presented on black slate.</p>
+        <small>Salmon · Ikura · Avocado · Ponzu</small>
+    </div>
+    <strong>$52</strong>
+</article>
+
+<!-- 10 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish10"></div>
+    <div>
+        <span>10 · SUSHI</span>
+        <h3>Ebi Tempura Maki</h3>
+        <p>Crisp shrimp tempura with avocado and umami glaze.</p>
+        <small>Ebi · Avocado · Tempura · Umami</small>
+    </div>
+    <strong>$43</strong>
+</article>
+
+<!-- 11 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish11"></div>
+    <div>
+        <span>11 · SUSHI</span>
+        <h3>Sake Ember Roll</h3>
+        <p>Seared salmon, avocado and smoky chili essence.</p>
+        <small>Salmon · Avocado · Chili · Sesame</small>
+    </div>
+    <strong>$47</strong>
+</article>
+
+<!-- 12 -->
+<article class="dish reveal" data-category="sushi">
+    <div class="dish-image dish12"></div>
+    <div>
+        <span>12 · SUSHI</span>
+        <h3>Golden Ikura Roll</h3>
+        <p>Tempura shrimp, ikura and YUME's signature glaze.</p>
+        <small>Ebi · Ikura · Nori · Signature Glaze</small>
+    </div>
+    <strong>$50</strong>
+</article>
+
+
+    <!-- ==================== SASHIMI ==================== -->
+
+    <!-- SASHIMI -->
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi01"></div>
+    <div>
+        <span>01 · SASHIMI</span>
+        <h3>Akari Sashimi</h3>
+        <p>Premium tuna and salmon sashimi served over crushed ice.</p>
+        <small>Akami · Salmon · Shiso · Daikon · Wasabi</small>
+    </div>
+    <strong>$44</strong>
+</article>
+
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi02"></div>
+    <div>
+        <span>02 · SASHIMI</span>
+        <h3>Otoro Kuro</h3>
+        <p>Rich bluefin tuna cuts with an elegant melt-in-the-mouth finish.</p>
+        <small>Otoro · Shiso · Daikon · Wasabi · Citrus</small>
+    </div>
+    <strong>$58</strong>
+</article>
+
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi03"></div>
+    <div>
+        <span>03 · SASHIMI</span>
+        <h3>Yuzu Hamachi</h3>
+        <p>Delicate yellowtail layered with bright Japanese citrus.</p>
+        <small>Hamachi · Yuzu · Shiso · Radish · Sea Salt</small>
+    </div>
+    <strong>$46</strong>
+</article>
+
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi04"></div>
+    <div>
+        <span>04 · SASHIMI</span>
+        <h3>Hotate Ikura</h3>
+        <p>Silky scallop sashimi finished with bright salmon roe.</p>
+        <small>Hotate · Ikura · Microgreens · Citrus · Shiso</small>
+    </div>
+    <strong>$49</strong>
+</article>
+
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi05"></div>
+    <div>
+        <span>05 · SASHIMI</span>
+        <h3>Tai Shio</h3>
+        <p>Fresh sea bream sliced with a refined touch of sea salt.</p>
+        <small>Tai · Lemon · Shiso · Daikon · Sea Salt</small>
+    </div>
+    <strong>$42</strong>
+</article>
+
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi06"></div>
+    <div>
+        <span>06 · SASHIMI</span>
+        <h3>Botan Ebi</h3>
+        <p>Sweet botan shrimp paired with delicate premium sashimi cuts.</p>
+        <small>Botan Ebi · Salmon · Tuna · Shiso · Wasabi</small>
+    </div>
+    <strong>$54</strong>
+</article>
+
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi07"></div>
+    <div>
+        <span>07 · SASHIMI</span>
+        <h3>Kuro Selection</h3>
+        <p>A refined selection of ocean cuts presented YUME style.</p>
+        <small>Tuna · Salmon · Scallop · Octopus · Ikura</small>
+    </div>
+    <strong>$56</strong>
+</article>
+
+<article class="dish reveal" data-category="sashimi">
+    <div class="dish-image sashimi08"></div>
+    <div>
+        <span>08 · SASHIMI</span>
+        <h3>YUME Signature</h3>
+        <p>The house sashimi collection featuring the finest seasonal cuts.</p>
+        <small>Otoro · Hamachi · Salmon · Botan Ebi · Hotate</small>
+    </div>
+    <strong>$68</strong>
+</article>
+
+
+    <!-- ==================== MAINS ==================== -->
+
+    <!-- MAINS -->
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains01"></div>
+    <div>
+        <span>01 · MAIN</span>
+        <h3>Miso Glazed Salmon</h3>
+        <p>Perfectly grilled salmon with rich miso glaze, seasonal vegetables and yuzu sauce.</p>
+        <small>Salmon · Miso · Asparagus · Yuzu · Sesame</small>
+    </div>
+    <strong>$38</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains02"></div>
+    <div>
+        <span>02 · MAIN</span>
+        <h3>Wagyu Steak</h3>
+        <p>A5 wagyu grilled to perfection, served with truffle sauce and seasonal vegetables.</p>
+        <small>Wagyu · Garlic · Mushroom · Asparagus · Truffle</small>
+    </div>
+    <strong>$68</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains03"></div>
+    <div>
+        <span>03 · MAIN</span>
+        <h3>Teriyaki Chicken</h3>
+        <p>Juicy chicken with classic teriyaki sauce, served with seasonal vegetables.</p>
+        <small>Chicken · Teriyaki · Rice · Greens · Sesame</small>
+    </div>
+    <strong>$28</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains04"></div>
+    <div>
+        <span>04 · MAIN</span>
+        <h3>Black Cod</h3>
+        <p>Signature miso marinated black cod with a delicate, buttery texture.</p>
+        <small>Black Cod · Miso · Lotus Root · Greens · Chili</small>
+    </div>
+    <strong>$46</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains05"></div>
+    <div>
+        <span>05 · MAIN</span>
+        <h3>Ebi Tempura Udon</h3>
+        <p>Fresh udon noodles in a delicate dashi broth, topped with crispy prawn tempura.</p>
+        <small>Udon · Ebi · Dashi · Nori · Spring Onion</small>
+    </div>
+    <strong>$24</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains06"></div>
+    <div>
+        <span>06 · MAIN</span>
+        <h3>Tonkatsu</h3>
+        <p>Crispy breaded pork cutlet served with fresh cabbage and house sauce.</p>
+        <small>Pork · Panko · Cabbage · Mustard · Tonkatsu Sauce</small>
+    </div>
+    <strong>$26</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains07"></div>
+    <div>
+        <span>07 · MAIN</span>
+        <h3>Unagi Don</h3>
+        <p>Grilled freshwater eel with a sweet soy glaze, served over steamed rice.</p>
+        <small>Unagi · Rice · Soy · Nori · Pickled Ginger</small>
+    </div>
+    <strong>$42</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains08"></div>
+    <div>
+        <span>08 · MAIN</span>
+        <h3>Tuna Tataki</h3>
+        <p>Lightly seared tuna with citrus ponzu, microgreens and signature sauce.</p>
+        <small>Tuna · Ponzu · Sesame · Daikon · Wasabi</small>
+    </div>
+    <strong>$34</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains09"></div>
+    <div>
+        <span>09 · MAIN</span>
+        <h3>Lamb Chops</h3>
+        <p>Grilled lamb chops with rosemary, red wine reduction and seasonal vegetables.</p>
+        <small>Lamb · Rosemary · Vegetables · Jus · Herbs</small>
+    </div>
+    <strong>$48</strong>
+</article>
+
+<article class="dish reveal" data-category="mains">
+    <div class="dish-image mains10"></div>
+    <div>
+        <span>10 · MAIN</span>
+        <h3>Seafood Teppanyaki</h3>
+        <p>A selection of premium seafood grilled on hot iron, served with seasonal vegetables.</p>
+        <small>Lobster · Scallop · Prawn · Asparagus · Garlic Butter</small>
+    </div>
+    <strong>$52</strong>
+</article>
+
+
+    <!-- ==================== RAMEN ==================== -->
+
+   <!-- RAMEN -->
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen01"></div>
+    <div>
+        <span>01 · RAMEN</span>
+        <h3>YUME Tonkotsu</h3>
+        <p>Silky pork broth with charred chashu, soft egg and aromatic black garlic.</p>
+        <small>Tonkotsu · Chashu · Egg · Nori · Scallion</small>
+    </div>
+    <strong>$28</strong>
+</article>
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen02"></div>
+    <div>
+        <span>02 · RAMEN</span>
+        <h3>Spicy Miso Ramen</h3>
+        <p>Rich miso broth layered with chili oil, roasted pork and delicate noodles.</p>
+        <small>Miso · Chashu · Chili · Egg · Sesame</small>
+    </div>
+    <strong>$26</strong>
+</article>
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen03"></div>
+    <div>
+        <span>03 · RAMEN</span>
+        <h3>Black Garlic Ramen</h3>
+        <p>Deep tonkotsu broth finished with roasted black garlic oil and crispy aromatics.</p>
+        <small>Black Garlic · Pork · Egg · Mushroom · Nori</small>
+    </div>
+    <strong>$27</strong>
+</article>
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen04"></div>
+    <div>
+        <span>04 · RAMEN</span>
+        <h3>Tokyo Shoyu Ramen</h3>
+        <p>Elegant soy-based broth with glazed pork, greens and seasonal Japanese garnish.</p>
+        <small>Shoyu · Pork · Bok Choy · Mushroom · Nori</small>
+    </div>
+    <strong>$24</strong>
+</article>
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen05"></div>
+    <div>
+        <span>05 · RAMEN</span>
+        <h3>Truffle Ramen</h3>
+        <p>Velvety ramen elevated with shaved truffle, roasted mushrooms and aromatic oil.</p>
+        <small>Truffle · Mushroom · Pork · Egg · Nori</small>
+    </div>
+    <strong>$32</strong>
+</article>
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen06"></div>
+    <div>
+        <span>06 · RAMEN</span>
+        <h3>Tantanmen</h3>
+        <p>Silky sesame broth with spicy minced meat, greens and fragrant chili oil.</p>
+        <small>Sesame · Minced Pork · Chili · Bok Choy · Egg</small>
+    </div>
+    <strong>$27</strong>
+</article>
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen07"></div>
+    <div>
+        <span>07 · RAMEN</span>
+        <h3>Seafood Ramen</h3>
+        <p>Premium seafood ramen with grilled prawns, scallops and a fragrant spicy broth.</p>
+        <small>Prawn · Scallop · Mussel · Mushroom · Nori</small>
+    </div>
+    <strong>$30</strong>
+</article>
+
+<article class="dish reveal" data-category="ramen">
+    <div class="dish-image ramen08"></div>
+    <div>
+        <span>08 · RAMEN</span>
+        <h3>Yuzu Chicken Ramen</h3>
+        <p>Delicate chicken broth brightened with yuzu, tender chicken and fresh greens.</p>
+        <small>Chicken · Yuzu · Bok Choy · Egg · Scallion</small>
+    </div>
+    <strong>$25</strong>
+</article>
+
+    <!-- ==================== DESSERT ==================== -->
+
+    <!-- DESSERT -->
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert01"></div>
+    <div>
+        <span>01 · DESSERT</span>
+        <h3>Yuzu Cloud</h3>
+        <p>Light yuzu mousse with a delicate citrus finish and seasonal Japanese garnish.</p>
+        <small>Yuzu · Vanilla · Citrus · Sakura</small>
+    </div>
+    <strong>$16</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert02"></div>
+    <div>
+        <span>02 · DESSERT</span>
+        <h3>Matcha Velvet</h3>
+        <p>Silky matcha dessert layered with delicate cream and a refined green tea finish.</p>
+        <small>Matcha · Cream · White Chocolate · Tea</small>
+    </div>
+    <strong>$18</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert03"></div>
+    <div>
+        <span>03 · DESSERT</span>
+        <h3>Black Sesame Éclair</h3>
+        <p>Elegant choux pastry filled with black sesame cream and dark chocolate.</p>
+        <small>Black Sesame · Chocolate · Cream · Cacao</small>
+    </div>
+    <strong>$17</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert04"></div>
+    <div>
+        <span>04 · DESSERT</span>
+        <h3>Sakura Parfait</h3>
+        <p>Delicate sakura parfait with soft cream, seasonal fruit and floral notes.</p>
+        <small>Sakura · Cream · Berry · Mochi</small>
+    </div>
+    <strong>$19</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert05"></div>
+    <div>
+        <span>05 · DESSERT</span>
+        <h3>Mochi Garden</h3>
+        <p>Handcrafted mochi in refined seasonal flavors served with delicate garnish.</p>
+        <small>Mochi · Matcha · Sakura · Red Bean</small>
+    </div>
+    <strong>$15</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert06"></div>
+    <div>
+        <span>06 · DESSERT</span>
+        <h3>Miso Caramel Tart</h3>
+        <p>Buttery caramel tart balanced with subtle white miso and vanilla cream.</p>
+        <small>Miso · Caramel · Vanilla · Praline</small>
+    </div>
+    <strong>$18</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert07"></div>
+    <div>
+        <span>07 · DESSERT</span>
+        <h3>Matcha Opera</h3>
+        <p>Precise layers of matcha sponge, cream and chocolate finished with tea glaze.</p>
+        <small>Matcha · Chocolate · Cream · Almond</small>
+    </div>
+    <strong>$20</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert08"></div>
+    <div>
+        <span>08 · DESSERT</span>
+        <h3>Yuzu Cheesecake</h3>
+        <p>Silky citrus cheesecake presented with a bright yuzu glaze and crisp elements.</p>
+        <small>Yuzu · Cream Cheese · Citrus · Vanilla</small>
+    </div>
+    <strong>$17</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert09"></div>
+    <div>
+        <span>09 · DESSERT</span>
+        <h3>Hojicha Panna Cotta</h3>
+        <p>Roasted hojicha panna cotta with black sesame and delicate caramel textures.</p>
+        <small>Hojicha · Sesame · Cream · Caramel</small>
+    </div>
+    <strong>$16</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert10"></div>
+    <div>
+        <span>10 · DESSERT</span>
+        <h3>Chocolate Zen</h3>
+        <p>Warm chocolate fondant with a molten center, vanilla cream and cacao crumble.</p>
+        <small>Dark Chocolate · Vanilla · Cacao · Gold</small>
+    </div>
+    <strong>$21</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert11"></div>
+    <div>
+        <span>11 · DESSERT</span>
+        <h3>Sakura Mochi</h3>
+        <p>Seasonal sakura mochi presented with floral textures and a delicate pink finish.</p>
+        <small>Sakura · Mochi · Rose · Berry</small>
+    </div>
+    <strong>$15</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert12"></div>
+    <div>
+        <span>12 · DESSERT</span>
+        <h3>Mango Yuzu Sphere</h3>
+        <p>A sculptural mango and yuzu creation with matcha, azuki and crisp chocolate.</p>
+        <small>Mango · Yuzu · Matcha · Azuki</small>
+    </div>
+    <strong>$19</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert13"></div>
+    <div>
+        <span>13 · DESSERT</span>
+        <h3>Black Forest Wagashi</h3>
+        <p>Japanese-inspired chocolate wagashi with cherry, cacao and elegant seasonal garnish.</p>
+        <small>Cacao · Cherry · Wagashi · Vanilla</small>
+    </div>
+    <strong>$22</strong>
+</article>
+
+<article class="dish reveal" data-category="dessert">
+    <div class="dish-image dessert14"></div>
+    <div>
+        <span>14 · DESSERT</span>
+        <h3>YUME Signature Dessert</h3>
+        <p>Our signature chocolate creation inspired by Japanese seasons and modern artistry.</p>
+        <small>Chocolate · Sakura · Vanilla · Gold</small>
+    </div>
+    <strong>$24</strong>
+</article>
+
+   <!-- ================= DRINKS ================= -->
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks01"></div>
+    <div>
+        <span>01 · DRINKS</span>
+        <h3>Yuzu Sparkling</h3>
+        <p>Bright yuzu citrus with sparkling bubbles and a clean refreshing finish.</p>
+        <small>Yuzu · Citrus · Sparkling Water · Ice</small>
+    </div>
+    <strong>$14</strong>
+</article>
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks02"></div>
+    <div>
+        <span>02 · DRINKS</span>
+        <h3>Sakura Grapefruit Fizz</h3>
+        <p>A delicate grapefruit fizz with a vibrant floral-citrus character.</p>
+        <small>Grapefruit · Sakura · Citrus · Soda</small>
+    </div>
+    <strong>$15</strong>
+</article>
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks03"></div>
+    <div>
+        <span>03 · DRINKS</span>
+        <h3>Passionfruit Sparkler</h3>
+        <p>Tropical passionfruit layered with sparkling freshness and bright citrus.</p>
+        <small>Passionfruit · Citrus · Sparkling Water · Ice</small>
+    </div>
+    <strong>$16</strong>
+</article>
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks04"></div>
+    <div>
+        <span>04 · DRINKS</span>
+        <h3>Berry Yuzu Spritz</h3>
+        <p>Rich berries meet Japanese yuzu in a refreshing signature spritz.</p>
+        <small>Berry · Yuzu · Citrus · Ice</small>
+    </div>
+    <strong>$17</strong>
+</article>
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks05"></div>
+    <div>
+        <span>05 · DRINKS</span>
+        <h3>Yuzu Cucumber Martini</h3>
+        <p>Crisp cucumber and bright yuzu create an elegant refreshing signature drink.</p>
+        <small>Yuzu · Cucumber · Herb · Ice</small>
+    </div>
+    <strong>$18</strong>
+</article>
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks06"></div>
+    <div>
+        <span>06 · DRINKS</span>
+        <h3>Classic Mojito</h3>
+        <p>A refreshing blend of lime, fresh mint, sparkling soda and crushed ice.</p>
+        <small>Lime · Mint · Soda · Ice</small>
+    </div>
+    <strong>$14</strong>
+</article>
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks07"></div>
+    <div>
+        <span>07 · DRINKS</span>
+        <h3>Cosmopolitan</h3>
+        <p>A vibrant berry and citrus-inspired signature drink with a smooth finish.</p>
+        <small>Cranberry · Citrus · Berry · Ice</small>
+    </div>
+    <strong>$16</strong>
+</article>
+
+<article class="dish reveal" data-category="drinks">
+    <div class="dish-image drinks08"></div>
+    <div>
+        <span>08 · DRINKS</span>
+        <h3>Mango Delight</h3>
+        <p>Silky ripe mango blended into a tropical, refreshing signature drink.</p>
+        <small>Fresh Mango · Citrus · Mint · Ice</small>
+    </div>
+    <strong>$15</strong>
+</article>
+
+</div>
+
+</section>
+
+
+    <!-- =====================================================
+         EXPERIENCE
+    ====================================================== -->
+
+    <section
+      class="experience"
+      id="experience"
+      aria-labelledby="experience-title"
+    >
+
+      <div class="experience-background"></div>
+
+      <div class="experience-overlay"></div>
+
+
+      <div class="experience-content reveal">
+
+        <p class="eyebrow">
+          THE YUME EXPERIENCE
+        </p>
+
+
+        <h2 id="experience-title">
+          A Feast<br>
+          <em>for All Senses</em>
+        </h2>
+
+
+        <p>
+          It is not only what is on your plate.
+          It is the atmosphere, the details, the people
+          and the quiet feeling that makes an evening
+          at YUME unforgettable.
+        </p>
+
+
+        <div class="experience-points">
+
+          <span>Fresh Ingredients</span>
+          <span>Japanese Techniques</span>
+          <span>Modern Presentation</span>
+          <span>Unforgettable Flavors</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RESERVATION
+    ====================================================== -->
+
+    <section
+      class="reservation-section"
+      id="reserve"
+      aria-labelledby="reservation-title"
+    >
+
+      <div class="reservation-info reveal">
+
+        <p class="eyebrow">
+          RESERVE YOUR MOMENT
+        </p>
+
+
+        <h2 id="reservation-title">
+          Your Table<br>
+          <em>Awaits.</em>
+        </h2>
+
+
+        <p>
+          Choose your moment.
+          We will take care of the rest.
+        </p>
+
+
+        <div class="opening-hours">
+
+          <span>DINNER</span>
+          <strong>18:00 — 23:00</strong>
+
+          <span>OPEN DAILY</span>
+          <strong>12:00 — 23:00</strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- ===================================================
+           RESERVATION FORM
+      ===================================================== -->
+
+      <form
+        class="reservation-form reveal"
+        id="reservationForm"
+        novalidate
+      >
+
+
+        <!-- NAME + EMAIL -->
+
+        <div class="form-row">
+
+          <label>
+            Full Name
+
+            <input
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder="Your name"
+              required
+            >
+
+          </label>
+
+
+          <label>
+            Email
+
+            <input
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            >
+
+          </label>
+
+        </div>
+
+
+        <!-- PHONE + GUESTS -->
+
+        <div class="form-row">
+
+          <label>
+            Phone Number
+
+            <input
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              placeholder="+91 98765 43210"
+              required
+            >
+
+          </label>
+
+
+          <label>
+            Number of Guests
+
+            <select
+              name="guests"
+              id="guestsSelect"
+              required
+            >
+
+              <option value="">
+                Select guests
+              </option>
+
+              <option value="1">1 Guest</option>
+              <option value="2">2 Guests</option>
+              <option value="3">3 Guests</option>
+              <option value="4">4 Guests</option>
+              <option value="5">5 Guests</option>
+              <option value="6">6 Guests</option>
+              <option value="7">7 Guests</option>
+              <option value="8">8 Guests</option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <!-- TABLE + DATE -->
+
+        <div class="form-row">
+
+          <label>
+            Table Number
+
+            <select
+              name="table"
+              id="tableSelect"
+              required
+            >
+
+              <option value="">
+                Select table
+              </option>
+
+              <option value="Table 01">Table 01</option>
+              <option value="Table 02">Table 02</option>
+              <option value="Table 03">Table 03</option>
+              <option value="Table 04">Table 04</option>
+              <option value="Table 05">Table 05</option>
+              <option value="Table 06">Table 06</option>
+              <option value="Table 07">Table 07</option>
+              <option value="Table 08">Table 08</option>
+              <option value="Table 09">Table 09</option>
+              <option value="Table 10">Table 10</option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+            Date
+
+            <input
+              type="date"
+              id="dateInput"
+              name="date"
+              required
+            >
+
+          </label>
+
+        </div>
+
+
+        <!-- TIME -->
+
+        <div class="form-row">
+
+          <label>
+            Time
+
+            <select
+              name="time"
+              id="timeSelect"
+              required
+            >
+
+              <option value="">
+                Select time
+              </option>
+
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00">19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="21:30">21:30</option>
+              <option value="22:00">22:00</option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <!-- SPECIAL REQUEST -->
+
+        <label>
+          Special Request / Occasion
+
+          <textarea
+            name="request"
+            rows="5"
+            placeholder="Birthday, anniversary, dietary request..."
+          ></textarea>
+
+        </label>
+
+
+        <!-- RESERVE BUTTON -->
+
+        <button
+          type="submit"
+          class="btn btn-primary reservation-button magnetic"
+        >
+          Reserve Table →
+        </button>
+
+
+        <p class="form-note">
+          Your reservation will be confirmed after
+          you review and confirm your selected table.
+        </p>
+
+
+        <!-- =================================================
+             RESERVATION SUCCESS / CONFIRMATION
+        ================================================== -->
+
+        <div
+          class="reservation-success"
+          id="reservationSuccess"
+          aria-live="polite"
+        >
+
+          <span aria-hidden="true">
+            ✦
+          </span>
+
+
+          <!-- TABLE CONFIRMATION -->
+
+          <div class="table-confirmation">
+
+            <h3>
+              Confirm Your Table
+            </h3>
+
+
+            <p>
+              <strong>Table:</strong>
+              <span id="tablePreview"></span>
+            </p>
+
+
+            <div class="confirmation-actions">
+
+              <button
+                type="button"
+                id="editTable"
+              >
+                EDIT TABLE
+              </button>
+
+
+              <button
+                type="button"
+                id="confirmTableBtn"
+              >
+                CONFIRM TABLE
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- =================================================
+               FINAL RESERVATION
+          ================================================== -->
+
+          <div
+            id="finalReservation"
+            class="final-reservation"
+            style="display:none;"
+          >
+
+            <h3>
+              Your moment is reserved.
+            </h3>
+
+
+            <p>
+              Thank you.
+              We look forward to welcoming you to YUME.
+            </p>
+
+
+            <p class="booking-code-display">
+              Booking Code:
+              <strong id="bookingCodeDisplay"></strong>
+            </p>
+
+
+            <div class="booking-details">
+
+              <p>
+                <strong>Name:</strong>
+                <span id="confirmName"></span>
+              </p>
+
+
+              <p>
+                <strong>Email:</strong>
+                <span id="confirmEmail"></span>
+              </p>
+
+
+              <p>
+                <strong>Phone:</strong>
+                <span id="confirmPhone"></span>
+              </p>
+
+
+              <p>
+                <strong>Guests:</strong>
+                <span id="confirmGuests"></span>
+              </p>
+
+
+              <p>
+                <strong>Table:</strong>
+                <span id="confirmSuccessTable"></span>
+              </p>
+
+
+              <p>
+                <strong>Date:</strong>
+                <span id="confirmDate"></span>
+              </p>
+
+
+              <p>
+                <strong>Time:</strong>
+                <span id="confirmTime"></span>
+              </p>
+
+
+              <p>
+                <strong>Special Request:</strong>
+                <span id="confirmRequest"></span>
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- MAKE ANOTHER RESERVATION -->
+
+          <button
+            type="button"
+            id="newReservation"
+          >
+            MAKE ANOTHER RESERVATION
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+
+    <!-- =====================================================
+         REVIEWS
+    ====================================================== -->
+
+    <section
+      class="reviews-section"
+      id="reviews"
+      aria-labelledby="reviews-title"
+    >
+
+      <div class="section-heading center reveal">
+
+        <p class="eyebrow">
+          WHAT GUESTS SAY
+        </p>
+
+
+        <h2 id="reviews-title">
+          20 Reviews.<br>
+          <em>Countless Memories.</em>
+        </h2>
+
+
+        <p class="demo-note">
+          Sample guest reviews for the website concept.
+        </p>
+
+      </div>
+
+
+      <div class="reviews-grid">
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “An unforgettable experience from the
+            first step inside to the final course.”
+          </p>
+          <strong>Aarav R.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The atmosphere is magical and the food
+            is simply outstanding.”
+          </p>
+          <strong>Sneha K.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “YUME is not just a restaurant.
+            It is an emotion.”
+          </p>
+          <strong>Rohan M.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “Beautiful details everywhere.
+            Every dish felt carefully considered.”
+          </p>
+          <strong>Meera S.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “A peaceful evening with incredible
+            flavors and warm service.”
+          </p>
+          <strong>Vikram P.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The cherry blossom setting makes dinner
+            feel like a dream.”
+          </p>
+          <strong>Ananya V.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The ramen was rich, balanced and
+            genuinely memorable.”
+          </p>
+          <strong>Arjun N.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “Elegant, quiet and beautifully designed.
+            Loved every minute.”
+          </p>
+          <strong>Diya R.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “A perfect place for a special celebration.”
+          </p>
+          <strong>Karan J.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The chef's special was the highlight
+            of our night.”
+          </p>
+          <strong>Ishita A.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “Every corner looks cinematic.
+            The food matches the beauty.”
+          </p>
+          <strong>Rahul D.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The service felt personal without
+            ever being intrusive.”
+          </p>
+          <strong>Priya M.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “One of the most thoughtful dining
+            experiences I've had.”
+          </p>
+          <strong>Aditya S.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The yuzu dishes were fresh, bright
+            and perfectly balanced.”
+          </p>
+          <strong>Nisha P.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “A wonderful blend of Japanese tradition
+            and modern design.”
+          </p>
+          <strong>Dev K.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The perfect restaurant for a slow,
+            beautiful evening.”
+          </p>
+          <strong>Riya T.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The desserts were delicate and not
+            overly sweet. Perfect ending.”
+          </p>
+          <strong>Manav G.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “YUME made our anniversary feel
+            genuinely special.”
+          </p>
+          <strong>Neha B.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “The lighting, music and food create
+            a beautiful atmosphere.”
+          </p>
+          <strong>Sameer L.</strong>
+          <span>Guest</span>
+        </article>
+
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>
+            “I would happily return just for
+            the experience.”
+          </p>
+          <strong>Tanvi C.</strong>
+          <span>Guest</span>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GALLERY
+    ====================================================== -->
+
+    <section
+      class="gallery-section"
+      id="gallery"
+      aria-labelledby="gallery-title"
+    >
+
+      <div class="section-heading reveal">
+
+        <p class="eyebrow">
+          GALLERY
+        </p>
+
+
+        <h2 id="gallery-title">
+          Moments<br>
+          <em>at YUME</em>
+        </h2>
+
+      </div>
+
+
+      <div class="gallery-grid">
+
+        <div
+          class="gallery-item gallery01 reveal"
+          role="img"
+          aria-label="YUME dining atmosphere"
+        ></div>
+
+        <div
+          class="gallery-item gallery02 reveal"
+          role="img"
+          aria-label="YUME culinary detail"
+        ></div>
+
+        <div
+          class="gallery-item gallery03 reveal"
+          role="img"
+          aria-label="Japanese-inspired dish"
+        ></div>
+
+        <div
+          class="gallery-item gallery04 reveal"
+          role="img"
+          aria-label="YUME restaurant interior"
+        ></div>
+
+        <div
+          class="gallery-item gallery05 reveal"
+          role="img"
+          aria-label="Seasonal ingredients"
+        ></div>
+
+        <div
+          class="gallery-item gallery06 reveal"
+          role="img"
+          aria-label="YUME evening atmosphere"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      class="contact-section"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
+
+      <div class="contact-info reveal">
+
+        <p class="eyebrow">
+          VISIT YUME
+        </p>
+
+
+        <h2 id="contact-title">
+          Find Us<br>
+          <em>Here.</em>
+        </h2>
+
+
+        <address class="address">
+
+          12 Sakura Lane<br>
+          Miyabi District<br>
+          Tokyo-inspired dining concept
+
+        </address>
+
+
+        <a href="tel:+910000000000">
+          +91 00000 00000
+        </a>
+
+
+        <a href="mailto:hello@yume.jp">
+          hello@yume.jp
+        </a>
+
+      </div>
+
+
+      <div class="map-card reveal">
+
+        <iframe
+          src="https://www.google.com/maps?q=Shibuya,Tokyo,Japan&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="YUME location map"
+        ></iframe>
+
+      </div>
+
+
+      <div class="contact-card reveal">
+
+        <p class="eyebrow">
+          GET IN TOUCH
+        </p>
+
+
+        <h3>
+          We'd Love to<br>
+          <em>Hear from You</em>
+        </h3>
+
+
+        <form
+          id="contactForm"
+          novalidate
+        >
+
+          <label>
+            <span class="sr-only">
+              Your name
+            </span>
+
+            <input
+              type="text"
+              name="contactName"
+              autocomplete="name"
+              placeholder="Your name"
+              required
+            >
+          </label>
+
+
+          <label>
+            <span class="sr-only">
+              Your email
+            </span>
+
+            <input
+              type="email"
+              name="contactEmail"
+              autocomplete="email"
+              placeholder="Your email"
+              required
+            >
+          </label>
+
+
+          <label>
+            <span class="sr-only">
+              Your message
+            </span>
+
+            <textarea
+              name="contactMessage"
+              rows="4"
+              placeholder="Your message"
+              required
+            ></textarea>
+          </label>
+
+
+          <button
+            class="btn btn-primary magnetic"
+            type="submit"
+          >
+            Send Message →
+          </button>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRIVATE DINING / EVENTS / GIFTS / CHEF'S TABLE
+    ====================================================== -->
+
+    <section
+      class="luxury-concierge"
+      id="concierge"
+      aria-labelledby="concierge-title"
+    >
+
+      <div class="concierge-heading reveal">
+
+        <p class="eyebrow">
+          BEYOND THE TABLE
+        </p>
+
+
+        <h2 id="concierge-title">
+          Make the evening
+          <em>yours.</em>
+        </h2>
+
+
+        <p>
+          Private rooms, celebrations, chef-led moments
+          and considered gifts — each arranged with the
+          same quiet attention as dinner itself.
+        </p>
+
+      </div>
+
+
+      <div class="concierge-grid">
+
+
+        <article
+          class="concierge-card reveal"
+          data-concierge="private"
+        >
+
+          <span class="concierge-number">
+            01
+          </span>
+
+          <span
+            class="concierge-icon"
+            lang="ja"
+            aria-hidden="true"
+          >
+            花
+          </span>
+
+          <h3>
+            Private Dining
+          </h3>
+
+          <p>
+            An intimate setting for family dinners,
+            proposals, executive evenings and milestone
+            celebrations.
+          </p>
+
+          <button
+            type="button"
+            class="concierge-link"
+            data-open-concierge="private"
+          >
+            Enquire privately →
+          </button>
+
+        </article>
+
+
+        <article
+          class="concierge-card reveal"
+          data-concierge="events"
+        >
+
+          <span class="concierge-number">
+            02
+          </span>
+
+          <span
+            class="concierge-icon"
+            lang="ja"
+            aria-hidden="true"
+          >
+            宴
+          </span>
+
+          <h3>
+            Events &amp; Celebrations
+          </h3>
+
+          <p>
+            From a quiet birthday to a full-room occasion,
+            YUME can shape the experience around your guests.
+          </p>
+
+          <button
+            type="button"
+            class="concierge-link"
+            data-open-concierge="events"
+          >
+            Plan an evening →
+          </button>
+
+        </article>
+
+
+        <article
+          class="concierge-card reveal"
+          data-concierge="gifts"
+        >
+
+          <span class="concierge-number">
+            03
+          </span>
+
+          <span
+            class="concierge-icon"
+            lang="ja"
+            aria-hidden="true"
+          >
+            贈
+          </span>
+
+          <h3>
+            Gift Experiences
+          </h3>
+
+          <p>
+            Offer a YUME dining memory with a beautifully
+            presented experience voucher for someone special.
+          </p>
+
+          <button
+            type="button"
+            class="concierge-link"
+            data-open-concierge="gifts"
+          >
+            Request a gift →
+          </button>
+
+        </article>
+
+
+        <article
+          class="concierge-card reveal"
+          data-concierge="chef"
+        >
+
+          <span class="concierge-number">
+            04
+          </span>
+
+          <span
+            class="concierge-icon"
+            lang="ja"
+            aria-hidden="true"
+          >
+            夢
+          </span>
+
+          <h3>
+            Chef's Table
+          </h3>
+
+          <p>
+            A closer look at the kitchen, seasonal ingredients
+            and the thinking behind the night's progression.
+          </p>
+
+          <button
+            type="button"
+            class="concierge-link"
+            data-open-concierge="chef"
+          >
+            Request the table →
+          </button>
+
+        </article>
+
+      </div>
+
+
+      <div class="concierge-trust reveal">
+
+        <span>
+          DIRECT WITH YUME
+        </span>
+
+        <i aria-hidden="true"></i>
+
+        <span>
+          PERSONAL ATTENTION
+        </span>
+
+        <i aria-hidden="true"></i>
+
+        <span>
+          SEASONAL &amp; CONSIDERED
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         JOURNAL
+    ====================================================== -->
+
+    <section
+      class="journal-section"
+      id="journal"
+      aria-labelledby="journal-title"
+    >
+
+      <div class="journal-intro reveal">
+
+        <p class="eyebrow">
+          THE YUME JOURNAL
+        </p>
+
+        <h2 id="journal-title">
+          Stories behind
+          <em>the moment.</em>
+        </h2>
+
+      </div>
+
+
+      <div class="journal-grid">
+
+
+        <article
+          class="journal-card journal-feature reveal"
+        >
+
+          <div
+            class="journal-image"
+            style="background-image:url('mount-fuji.jpg')"
+            role="img"
+            aria-label="Mount Fuji and Japanese landscape"
+          ></div>
+
+
+          <div class="journal-copy">
+
+            <span>
+              01 · ORIGIN
+            </span>
+
+            <h3>
+              From season to plate
+            </h3>
+
+            <p>
+              YUME follows the quiet rhythm of Japanese
+              seasons — letting ingredients decide the story.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article
+          class="journal-card reveal"
+        >
+
+          <div
+            class="journal-image"
+            style="background-image:url('chef-kitchen.jpg')"
+            role="img"
+            aria-label="Chef working in the YUME kitchen"
+          ></div>
+
+
+          <div class="journal-copy">
+
+            <span>
+              02 · CRAFT
+            </span>
+
+            <h3>
+              The hands behind YUME
+            </h3>
+
+            <p>
+              Technique matters. So does restraint.
+              Discover the philosophy behind the kitchen.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article
+          class="journal-card reveal"
+        >
+
+          <div
+            class="journal-image"
+            style="background-image:url('more-than-meal.jpg')"
+            role="img"
+            aria-label="YUME dining experience"
+          ></div>
+
+
+          <div class="journal-copy">
+
+            <span>
+              03 · MEMORY
+            </span>
+
+            <h3>
+              More than a meal
+            </h3>
+
+            <p>
+              A dinner becomes meaningful when the details
+              stay with you long after the last course.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         YUME SERVICE STANDARD
+    ====================================================== -->
+
+    <section
+      class="luxury-standard"
+      aria-label="YUME service standards"
+    >
+
+      <div class="standard-item">
+
+        <strong>01</strong>
+
+        <span>
+          Thoughtful hospitality
+        </span>
+
+      </div>
+
+
+      <div class="standard-item">
+
+        <strong>02</strong>
+
+        <span>
+          Seasonal Japanese identity
+        </span>
+
+      </div>
+
+
+      <div class="standard-item">
+
+        <strong>03</strong>
+
+        <span>
+          Private dining available
+        </span>
+
+      </div>
+
+
+      <div class="standard-item">
+
+        <strong>04</strong>
+
+        <span>
+          Reservation-first experience
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONCIERGE MODAL
+    ====================================================== -->
+
+    <div
+      class="concierge-modal"
+      id="conciergeModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="conciergeModalTitle"
+    >
+
+      <div
+        class="concierge-modal-backdrop"
+        data-close-concierge
+      ></div>
+
+
+      <div class="concierge-modal-card">
+
+        <button
+          class="concierge-close"
+          type="button"
+          data-close-concierge
+          aria-label="Close concierge dialog"
+        >
+          ×
+        </button>
+
+
+        <p
+          class="eyebrow"
+          id="conciergeModalEyebrow"
+        >
+          YUME CONCIERGE
+        </p>
+
+
+        <h2 id="conciergeModalTitle">
+          Make it
+          <em>personal.</em>
+        </h2>
+
+
+        <p id="conciergeModalText">
+          Tell us what you are imagining and our team
+          can shape the details around your evening.
+        </p>
+
+
+        <a
+          href="#contact"
+          class="btn btn-primary"
+          id="conciergeContactLink"
+        >
+          Begin the enquiry →
+        </a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="footer-background"></div>
+
+    <div class="footer-overlay"></div>
+
+
+    <div class="thank-you reveal">
+
+      <div class="ending-petals">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+      <p class="eyebrow">
+        A FINAL MOMENT
+      </p>
+
+
+      <h2>
+        THANK YOU FOR<br>
+        <em>VISITING OUR WORLD</em>
+      </h2>
+
+
+      <p>
+        We hope your journey with us was unforgettable.
+      </p>
+
+
+      <div
+        class="hero-divider"
+        aria-hidden="true"
+      >
+
+        <span></span>
+        <b>✦</b>
+        <span></span>
+
+      </div>
+
+
+      <strong>
+        Until we meet again.
+      </strong>
+
+
+      <p>
+        May every beautiful moment find its way back to you.
+      </p>
+
+
+      <div class="footer-logo">
+        YUME
+      </div>
+
+
+      <small
+        class="footer-japanese"
+        lang="ja"
+      >
+        夢 · YUME · 夢
+      </small>
+
+
+      <span class="footer-tagline">
+        A CULINARY JOURNEY INTO A BETTER TOMORROW
+      </span>
+
+    </div>
+
+
+    <!-- CREATOR -->
+
+    <div class="creator">
+
+      <span>
+        DESIGNED &amp; DEVELOPED BY
+      </span>
+
+
+      <strong>
+        CH. S. E. DEEPAK
+      </strong>
+
+
+      <small>
+        Web Developer • Creator of this YUME concept
+      </small>
+
+    </div>
+
+
+    <!-- FOOTER SERVICES -->
+
+    <nav
+      class="footer-services"
+      aria-label="Footer navigation"
+    >
+
+      <a href="#concierge">
+        Private Dining
+      </a>
+
+      <a href="#concierge">
+        Gift Experiences
+      </a>
+
+      <a href="#concierge">
+        Events
+      </a>
+
+      <a href="#contact">
+        Accessibility
+      </a>
+
+      <a href="#contact">
+        Contact YUME
+      </a>
+
+    </nav>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 YUME
+      </span>
+
+
+      <span>
+        A CINEMATIC DINING EXPERIENCE
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       BACKGROUND MUSIC
+  ====================================================== -->
+
+  <audio
+    id="backgroundMusic"
+    loop
+    preload="metadata"
+  >
+
+    <source
+      src="music.mp3"
+      type="audio/mpeg"
+    >
+
+  </audio>
+
+
+  <!-- =====================================================
+       FLOATING SOUND BUTTON
+  ====================================================== -->
+
+  <button
+    class="sound-button premium-sound"
+    id="soundButton"
+    type="button"
+    aria-label="Toggle YUME ambient music"
+    aria-pressed="false"
+  >
+
+    <span class="sound-orbit"></span>
+
+
+    <span
+      class="sound-flower"
+      aria-hidden="true"
+    >
+      ✿
+    </span>
+
+
+    <span class="sound-copy">
+
+      <small>
+        YUME AMBIENCE
+      </small>
+
+      <strong>
+        SOUND OFF
+      </strong>
+
+    </span>
+
+
+    <span
+      class="sound-wave"
+      aria-hidden="true"
+    >
+
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+
+    </span>
+
+  </button>
+
+
+  <!-- =====================================================
+       BACK TO TOP
+  ====================================================== -->
+
+  <button
+    class="top-button"
+    id="topButton"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
+
+  <!-- =====================================================
+       SCRIPTS
+  ====================================================== -->
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+  ></script>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
