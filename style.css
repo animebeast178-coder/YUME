@@ -2243,32 +2243,32 @@ em {
 
     z-index: 3;
   }
-
   .nav-links {
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000 !important;
 
-    inset: 0;
+    background: rgba(8, 5, 7, 0.97);
 
-    background:
-      rgba(8, 5, 7, 0.97);
-
-    backdrop-filter:
-      blur(20px);
+    backdrop-filter: blur(20px);
 
     display: flex;
-
     flex-direction: column;
 
     justify-content: center;
+    align-items: flex-start;
+
+    padding-left: 40px;
 
     gap: 25px;
 
-    transform:
-      translateY(-100%);
+    transform: translateY(-100%);
 
-    transition:
-      transform 0.5s ease;
-  }
+    transition: transform 0.5s ease;
+}
 
   .nav-links.open {
     transform:
@@ -9631,7 +9631,7 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .journal-intro { max-width: 760px; margin-bottom: 55px; }
 .journal-grid { display:grid; grid-template-columns:1.25fr 1fr 1fr; gap:18px; }
 .journal-card { border:1px solid rgba(255,255,255,.1); background:#0f0b0d; overflow:hidden; min-width:0; }
-.journal-image { height:260px; background-size:cover; background-position:center; transition:transform 1.2s var(--ease-luxury), filter .8s ease; filter:saturate(.8); }
+.journal-image { height:260px; background-size:contain; background-position:center; transition:transform 1.2s var(--ease-luxury), filter .8s ease; filter:saturate(.8); }
 .journal-card:hover .journal-image { transform:scale(1.06); filter:saturate(1.05); }
 .journal-copy { padding:26px; }
 .journal-copy span { font-size:9px; letter-spacing:.2em; color:var(--pink2); }
@@ -15209,7 +15209,7 @@ img {
 
     min-height: 114% !important;
 
-    z-index: -3;
+  z-index: 0;
 
     background-image:
         url("./more-than-meal-new.png") !important;
@@ -19053,7 +19053,7 @@ background-attachment: scroll !important;
         url("./chef-kitchen.jpg") !important;
 
     background-position: center center !important;
-    background-size: cover !important;
+  background-size: auto, contain !important;
     background-repeat: no-repeat !important;
 }
 /* =====================================================
@@ -31488,7 +31488,7 @@ background-attachment: scroll !important;
 
 @media (max-width: 700px) {
 
-    .contact-section {
+     #contact.contact-section {
         grid-template-columns: 1fr !important;
 
         grid-template-areas:
@@ -31508,5 +31508,512 @@ background-attachment: scroll !important;
 
     .contact-card {
         padding: 22px 18px !important;
+    }
+}
+/* =========================================================
+   YUME — FINAL MOBILE RESPONSIVE SYSTEM
+   410px / 390px / 375px FRIENDLY
+   DESKTOP UNTOUCHED
+========================================================= */
+
+@media (max-width: 800px) {
+
+    /* -------------------------
+       GLOBAL MOBILE
+    ------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+
+    /* -------------------------
+       HERO
+    ------------------------- */
+
+    .hero {
+        min-height: 100svh !important;
+        height: auto !important;
+        padding: 100px 20px 70px !important;
+    }
+
+    .hero h1 {
+        font-size: clamp(68px, 22vw, 105px) !important;
+        line-height: .82 !important;
+    }
+
+    .hero h2 {
+        font-size: clamp(28px, 8vw, 42px) !important;
+    }
+
+    .hero-description {
+        max-width: 100% !important;
+        font-size: 13px !important;
+        line-height: 1.7 !important;
+    }
+
+    .hero-buttons {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+
+    /* -------------------------
+       STORY
+       IMPORTANT: NO FULL-SCREEN
+       CHAPTERS ON MOBILE
+    ------------------------- */
+
+    #story.yume-story {
+        width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        overflow: hidden !important;
+        background-attachment: scroll !important;
+    }
+
+    #story.yume-story .story-opening {
+        width: 100% !important;
+        min-height: 100svh !important;
+        height: auto !important;
+        padding: 90px 20px 70px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #story.yume-story .story-opening-inner {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    #story.yume-story .story-kanji {
+        font-size: clamp(80px, 25vw, 120px) !important;
+        margin-bottom: 30px !important;
+    }
+
+    #story.yume-story .story-opening h2 {
+        font-size: clamp(48px, 14vw, 72px) !important;
+        line-height: .86 !important;
+        margin-bottom: 24px !important;
+    }
+
+    #story.yume-story .story-opening p {
+        max-width: 330px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        font-size: 13px !important;
+        line-height: 1.75 !important;
+    }
+
+    #story.yume-story .story-text-section,
+    #story.yume-story .story-dark,
+    #story.yume-story .story-light,
+    #story.yume-story .story-final,
+    #story.yume-story .story-ending {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 75px 22px !important;
+    }
+
+    #story.yume-story .story-text-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    #story.yume-story .story-text-content h3 {
+        font-size: clamp(42px, 13vw, 65px) !important;
+        line-height: .9 !important;
+    }
+
+    #story.yume-story .story-text-content p {
+        max-width: 100% !important;
+        font-size: 15px !important;
+        line-height: 1.75 !important;
+        margin-bottom: 22px !important;
+    }
+
+    #story.yume-story .story-paragraph-side {
+        display: none !important;
+    }
+
+
+    /* -------------------------
+       TABLE / STORY / CHEF
+    ------------------------- */
+
+    .table-image,
+    .story-image,
+    .chef-image {
+        min-height: 320px !important;
+        height: 320px !important;
+    }
+
+    .table-content,
+    .story-content,
+    .chef-content {
+        padding: 60px 22px !important;
+    }
+
+
+    /* -------------------------
+       MENU
+    ------------------------- */
+
+    .menu-section {
+        padding: 70px 20px !important;
+    }
+
+    .menu-filters {
+        gap: 8px !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+    }
+
+    .filter {
+        flex: 0 0 auto !important;
+    }
+
+    .dish {
+        grid-template-columns: 82px minmax(0, 1fr) !important;
+        gap: 12px !important;
+        min-height: 130px !important;
+        padding: 12px !important;
+    }
+
+    .dish-image {
+        width: 82px !important;
+        height: 105px !important;
+    }
+
+    .dish h3 {
+        font-size: 19px !important;
+    }
+
+
+    /* -------------------------
+       EXPERIENCE
+       KEEP EXISTING DESIGN
+       ONLY PREVENT OVERFLOW
+    ------------------------- */
+
+    #experience {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .experience-content {
+        width: 100% !important;
+        padding: 70px 20px !important;
+    }
+
+    .experience-content h2 {
+        font-size: clamp(52px, 15vw, 80px) !important;
+        line-height: .86 !important;
+    }
+
+
+    /* -------------------------
+       REVIEWS
+    ------------------------- */
+
+    #reviews {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .reviews-section {
+        padding: 70px 20px !important;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1px !important;
+    }
+
+    .review {
+        min-height: auto !important;
+        padding: 25px 20px !important;
+    }
+
+    .review p {
+        font-size: 19px !important;
+        line-height: 1.35 !important;
+    }
+
+
+    /* -------------------------
+       GALLERY
+    ------------------------- */
+
+    #gallery {
+        width: 100% !important;
+        min-height: auto !important;
+        overflow: hidden !important;
+    }
+
+    .gallery-section {
+        padding: 70px 20px !important;
+    }
+
+    .gallery-grid {
+        width: 100% !important;
+
+        grid-template-columns: 1fr !important;
+
+        grid-auto-rows: 230px !important;
+
+        gap: 7px !important;
+    }
+
+    .gallery01,
+    .gallery04 {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
+
+    /* -------------------------
+       CONTACT
+    ------------------------- */
+
+    #contact.contact-section {
+        width: 100% !important;
+
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        grid-template-areas:
+            "info"
+            "map"
+            "form" !important;
+
+        gap: 20px !important;
+
+        min-height: auto !important;
+
+        padding: 70px 20px !important;
+    }
+
+    #contact .contact-info {
+        grid-area: info !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    #contact .contact-info h2 {
+        font-size: clamp(48px, 14vw, 70px) !important;
+        line-height: .88 !important;
+    }
+
+    #contact .contact-info .address,
+    #contact .contact-info > a {
+        display: none !important;
+    }
+
+    #contact .map-card {
+        grid-area: map !important;
+        width: 100% !important;
+        height: 240px !important;
+        min-height: 240px !important;
+    }
+
+    #contact .map-card iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    #contact .contact-card {
+        grid-area: form !important;
+        width: 100% !important;
+        padding: 22px 18px !important;
+    }
+
+    #contact .contact-card h3 {
+        font-size: 30px !important;
+        line-height: .95 !important;
+    }
+
+    #contact .contact-card input,
+    #contact .contact-card textarea {
+        width: 100% !important;
+        font-size: 13px !important;
+        padding: 11px 12px !important;
+    }
+
+
+    /* -------------------------
+       RESERVATION
+       KEEP FUNCTIONALITY
+    ------------------------- */
+
+    #reserve {
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .reservation-section {
+        padding: 70px 20px !important;
+    }
+
+    .reservation-form {
+        width: 100% !important;
+        padding: 22px 18px !important;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+
+    .footer {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 70px 20px 45px !important;
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .hero {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    #story.yume-story .story-opening {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    #story.yume-story .story-text-section,
+    #story.yume-story .story-dark,
+    #story.yume-story .story-light,
+    #story.yume-story .story-final,
+    #story.yume-story .story-ending {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .menu-section,
+    .reviews-section,
+    .gallery-section,
+    .reservation-section {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    #contact.contact-section {
+        padding-left: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .gallery-grid {
+        grid-auto-rows: 210px !important;
+    }
+
+}
+@media (max-width: 768px) {
+    .table-section .table-image {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+
+        z-index: 0 !important;
+
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+}
+@media (max-width: 768px) {
+    .story-bg {
+        background-size: contain !important;
+        background-position: center top !important;
+        background-repeat: no-repeat !important;
+    }
+}
+@media (max-width: 768px) {
+    .journal-image {
+        background-size: contain !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+}
+@media (max-width: 768px) {
+
+    .chef-section .chef-image {
+        height: 240px !important;
+        min-height: 240px !important;
+
+        background-size: contain !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+    }
+
+}
+/* =====================================================
+   YUME MENU — MOBILE CATEGORY TEXT FIX
+===================================================== */
+
+@media (max-width: 768px) {
+
+    #yume-menu .yume-category-item {
+        grid-template-columns: 35px 110px minmax(0, 1fr) 42px !important;
+        column-gap: 10px !important;
+
+        height: 75px !important;
+        min-height: 75px !important;
+    }
+
+    #yume-menu .yume-category-image {
+        width: 110px !important;
+        min-width: 110px !important;
+        max-width: 110px !important;
+
+        height: 60px !important;
+        min-height: 60px !important;
+        max-height: 60px !important;
+    }
+
+    #yume-menu .yume-category-info {
+        min-width: 0 !important;
+        overflow: hidden !important;
+    }
+
+    #yume-menu .yume-category-info strong {
+        font-size: 18px !important;
+        white-space: nowrap !important;
+    }
+
+    #yume-menu .yume-category-arrow {
+        width: 42px !important;
+        height: 42px !important;
     }
 }
