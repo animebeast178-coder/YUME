@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://animebeast178-coder.github.io/YUME/sitemap.xml
