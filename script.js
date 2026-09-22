@@ -75,17 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollProgress =
     document.getElementById("scrollProgress");
 
-  const soundButton =
-    document.getElementById("soundButton");
-
-  const backgroundMusic =
-    document.getElementById("backgroundMusic");
-
   const introScreen =
     document.getElementById("introScreen");
-
-  const introMusicButton =
-    document.getElementById("introMusicButton");
 
   const reservationForm =
     document.getElementById("reservationForm");
@@ -270,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
   /* =======================================================
      INTRO SCREEN
   ======================================================= */
-
+const exploreText = document.querySelector(".explore-text");
   function closeIntro() {
 
     if (!introScreen) {
@@ -285,60 +276,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
+if (exploreText) {
+    exploreText.addEventListener("click", closeIntro);
+}
 
-  if (introScreen) {
+if (introScreen) {
 
-    body.style.overflow =
-      "hidden";
+  body.style.overflow =
+    "hidden";
 
-  }
-
-
-  if (introMusicButton) {
-
-    introMusicButton.addEventListener(
-      "click",
-      async () => {
-
-        if (!backgroundMusic) {
-
-          closeIntro();
-
-          return;
-
-        }
-
-        try {
-
-          backgroundMusic.volume =
-            0.35;
-
-          await backgroundMusic.play();
-
-          introMusicButton.classList.add(
-            "playing"
-          );
-
-          setTimeout(
-            closeIntro,
-            900
-          );
-
-        } catch (error) {
-
-          console.warn(
-            "YUME music could not start:",
-            error
-          );
-
-          closeIntro();
-
-        }
-
-      }
-    );
-
-  }
+}
 
 
   /* =======================================================
@@ -1737,126 +1684,6 @@ image.style.backgroundPosition =
     }
 
   }
-
-
-  /* =======================================================
-     PREMIUM MUSIC
-  ======================================================= */
-
-  function updateSoundUI(
-    playing
-  ) {
-
-    if (!soundButton) {
-      return;
-    }
-
-
-    soundButton.classList.toggle(
-      "is-playing",
-      playing
-    );
-
-
-    soundButton.setAttribute(
-      "aria-pressed",
-      String(playing)
-    );
-
-
-    const label =
-      soundButton.querySelector(
-        ".sound-copy strong"
-      );
-
-
-    if (label) {
-
-      label.textContent =
-        playing
-          ? "SOUND ON"
-          : "SOUND OFF";
-
-    }
-
-  }
-
-
-  if (
-    soundButton &&
-    backgroundMusic
-  ) {
-
-    backgroundMusic.volume =
-      0.35;
-
-    updateSoundUI(false);
-
-
-    soundButton.addEventListener(
-      "click",
-      async () => {
-
-        if (
-          backgroundMusic.paused
-        ) {
-
-          try {
-
-            await backgroundMusic.play();
-
-            updateSoundUI(
-              true
-            );
-
-          } catch (error) {
-
-            console.warn(
-              "Music playback blocked:",
-              error
-            );
-
-          }
-
-        } else {
-
-          backgroundMusic.pause();
-
-          updateSoundUI(
-            false
-          );
-
-        }
-
-      }
-    );
-
-
-    backgroundMusic.addEventListener(
-      "play",
-      () => {
-
-        updateSoundUI(
-          true
-        );
-
-      }
-    );
-
-
-    backgroundMusic.addEventListener(
-      "pause",
-      () => {
-
-        updateSoundUI(
-          false
-        );
-
-      }
-    );
-
-  }
-
 
   /* =======================================================
      LANGUAGE SWITCHER
@@ -4167,11 +3994,7 @@ if (emailError) {
     "visibilitychange",
     () => {
 
-      if (
-        document.hidden &&
-        backgroundMusic &&
-        !backgroundMusic.paused
-      ) {
+      if (document.hidden) {
 
         /*
           Do not pause restaurant ambience automatically.
@@ -4251,8 +4074,6 @@ if (emailError) {
       "guestsSelect",
 
       "contactForm",
-
-      "backgroundMusic"
 
     ];
 

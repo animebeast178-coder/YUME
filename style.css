@@ -4845,57 +4845,8 @@ textarea:focus {
     background: rgba(255,255,255,0.35) !important;
 }
 
-
-/* MUSIC BUTTON */
-
-.intro-music {
-    position: relative !important;
-
-    width: 58px !important;
-    height: 58px !important;
-
-    padding: 0 !important;
-
-    border-radius: 50% !important;
-
-    border: 1px solid rgba(255,255,255,0.45) !important;
-
-    background: #000 !important;
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    cursor: pointer !important;
-
-    color: white !important;
-
-    transition:
-        transform .4s ease,
-        border-color .4s ease,
-        box-shadow .4s ease !important;
-}
-
-
 /* CRESCENT */
 
-.moon-music {
-    position: relative !important;
-
-    width: 24px !important;
-    height: 24px !important;
-
-    border-radius: 50% !important;
-
-    background: #f2dce1 !important;
-
-    display: block !important;
-
-    overflow: hidden !important;
-
-    box-shadow:
-        0 0 15px rgba(242,220,225,.18) !important;
-}
 
 
 /* CUT */
@@ -4919,59 +4870,8 @@ textarea:focus {
 
 /* MUSIC NOTE */
 
-.moon-music::after {
-    content: "♪" !important;
-
-    position: absolute !important;
-
-    z-index: 3 !important;
-
-    left: 5px !important;
-    top: 4px !important;
-
-    font-size: 11px !important;
-
-    color: #f2dce1 !important;
-}
-
-
 /* TEXT */
 
-.music-text {
-    position: absolute;
-
-    top: 70px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    gap: 6px;
-
-    white-space: nowrap;
-
-    font-family: "DM Sans", sans-serif;
-
-    text-transform: uppercase;
-
-    color: rgba(255,255,255,0.7);
-}
-
-.music-text strong {
-    font-size: 8px;
-    font-weight: 400;
-
-    letter-spacing: 0.28em;
-}
-
-.music-text small {
-    font-size: 6px;
-    font-weight: 300;
-
-    letter-spacing: 0.20em;
-
-    color: rgba(255,255,255,0.38);
-}
 /* =====================================================
    MORE THAN A MEAL — NEW IMAGE
 ===================================================== */
@@ -5240,38 +5140,6 @@ textarea:focus {
 
 /* MUSIC BUTTON */
 
-.intro-music {
-    position: relative;
-
-    width: 64px !important;
-    height: 64px !important;
-
-    display: grid !important;
-    place-items: center !important;
-
-    border-radius: 50% !important;
-
-    border:
-        1px solid rgba(255, 225, 230, 0.65) !important;
-
-    background:
-        rgba(0, 0, 0, 0.48) !important;
-
-    backdrop-filter: blur(8px);
-
-    color: #f7c4d1 !important;
-
-    box-shadow:
-        0 0 25px rgba(242, 183, 199, 0.10),
-        inset 0 0 20px rgba(255, 255, 255, 0.03);
-
-    cursor: pointer;
-
-    transition:
-        transform .45s ease,
-        border-color .45s ease,
-        box-shadow .45s ease;
-}
 
 
 /* OUTER RING */
@@ -32015,5 +31883,158 @@ background-attachment: scroll !important;
     #yume-menu .yume-category-arrow {
         width: 42px !important;
         height: 42px !important;
+    }
+}
+/* =====================================================
+   YUME — BEGIN THE JOURNEY
+===================================================== */
+.explore-text {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    transform: translateX(-50%);
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    padding: 0;
+
+    background: none;
+    border: none;
+    outline: none;
+
+    color: #f3e5dd;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    z-index: 20;
+}
+
+/* Side lines */
+
+.explore-line {
+    width: 55px;
+    height: 1px;
+
+    background: rgba(232, 157, 157, 0.75);
+
+    transition: width 0.4s ease;
+}
+
+.explore-line:first-child {
+    margin-right: 28px;
+}
+
+.explore-line:nth-child(3) {
+    margin-left: 28px;
+}
+
+/* Text */
+
+.explore-label {
+    white-space: nowrap;
+
+    transition:
+        letter-spacing 0.4s ease,
+        text-shadow 0.4s ease;
+}
+
+/* Circular arrow */
+
+.explore-arrow {
+    position: absolute;
+
+    top: 48px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(232, 157, 157, 0.75);
+    border-radius: 50%;
+
+    color: #f0b1a8;
+
+    font-size: 24px;
+    line-height: 1;
+
+    box-shadow:
+        0 0 18px rgba(232, 157, 157, 0.12);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease;
+}
+
+/* Hover */
+
+.explore-text:hover .explore-label {
+    letter-spacing: 6px;
+
+    text-shadow:
+        0 0 12px rgba(232, 157, 157, 0.35);
+}
+
+.explore-text:hover .explore-line {
+    width: 85px;
+}
+
+.explore-text:hover .explore-arrow {
+    transform: translateX(-50%) translateY(5px);
+
+    background: rgba(232, 157, 157, 0.06);
+
+    box-shadow:
+        0 0 25px rgba(232, 157, 157, 0.28);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .explore-text {
+        bottom: 35px;
+
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .explore-line {
+        width: 35px;
+    }
+
+    .explore-line:first-child {
+        margin-right: 16px;
+    }
+
+    .explore-line:nth-child(3) {
+        margin-left: 16px;
+    }
+
+    .explore-arrow {
+        top: 38px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 21px;
     }
 }
