@@ -306,7 +306,7 @@ button {
   inset: -5%;
 
   background-image:
-    url("flowers.webp");
+  url("hero.jpg");
 
   background-position: center 32%;
 
@@ -1199,7 +1199,7 @@ em {
       rgba(8, 5, 6, 0.08),
       rgba(8, 5, 6, 0.08)
     ),
-    url("flowers.webp");
+  url("hero.jpg");
 
   background-position: center;
   background-size: cover;
@@ -1871,7 +1871,7 @@ em {
       rgba(8, 5, 7, 0.88)
     ),
 
-    url("flowers.webp")
+    url("hero.jpg")
     center 72% / cover;
 }
 
@@ -3333,7 +3333,7 @@ textarea:focus {
     content: "";
     position: absolute;
     inset: -8%;
-    background-image: url("flowers.webp");
+    background-image: url("hero.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -6933,7 +6933,7 @@ filter:
     inset: -5% !important;
     width: 110% !important;
     height: 110% !important;
-    background-image: url("flowers.webp") !important;
+  background-image: url("hero.jpg") !important;
     background-size: cover !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
@@ -15791,7 +15791,7 @@ img {
   inset: -5%;
 
   background-image:
-    url("./hero-japan-dusk.png");
+url("./hero-japan-dusk.png");
 
   background-position:
     center center;
@@ -15819,8 +15819,8 @@ img {
 ===================================================== */
 
 .hero-background {
-    background-image: url("./hero-japan-dusk.png") !important;
-
+    background-image: url("./hero-japan-dusk.png")!important;
+    
     background-position: center center !important;
 
     background-size: cover !important;
@@ -15857,7 +15857,7 @@ img {
             rgba(8, 6, 7, 0.48),
             rgba(8, 6, 7, 0.68)
         ),
-        url("./hero-japan-dusk.png") center center / cover no-repeat !important;
+       url("./hero-japan-dusk.png") center center / cover no-repeat !important;
 }
 
 
@@ -16209,7 +16209,7 @@ img {
             rgba(7, 8, 12, 0.48),
             rgba(7, 7, 9, 0.70)
         ),
-        url("./hero-japan-dusk.png")
+     url("./hero-japan-dusk.png")
         center center / cover no-repeat !important;
 }
 

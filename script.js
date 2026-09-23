@@ -1624,68 +1624,6 @@ image.style.backgroundPosition =
 
 
   /* =======================================================
-     HERO PETALS
-  ======================================================= */
-
-  if (
-    heroPetals &&
-    !reducedMotion
-  ) {
-
-    const petalCount =
-      window.innerWidth < 700
-        ? 12
-        : 22;
-
-
-    for (
-      let i = 0;
-      i < petalCount;
-      i++
-    ) {
-
-      const petal =
-        document.createElement(
-          "span"
-        );
-
-      petal.className =
-        "petal";
-
-
-      petal.style.left =
-        `${Math.random() * 100}%`;
-
-
-      petal.style.setProperty(
-        "--drift",
-        `${-120 + Math.random() * 240}px`
-      );
-
-
-      petal.style.animationDuration =
-        `${7 + Math.random() * 8}s`;
-
-
-      petal.style.animationDelay =
-        `${Math.random() * 8}s`;
-
-
-      petal.style.transform =
-        `scale(
-          ${0.6 + Math.random() * 0.8}
-        )`;
-
-
-      heroPetals.appendChild(
-        petal
-      );
-
-    }
-
-  }
-
-  /* =======================================================
      LANGUAGE SWITCHER
   ======================================================= */
 
